@@ -11,5 +11,11 @@ describe('App', () => {
     beforeEach(() => {
       page.navigateTo('/');
     });
+
+    it('should have a title saying Home', () => {
+      page.getHomeTitleText().then(title => {
+        expect(title).toEqual('Home');
+      });
+    });
   });
 });
