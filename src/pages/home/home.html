@@ -6,6 +6,10 @@
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-</ion-content>
+ 
+<ng-container *ngFor="let article of articles" class="container"> 
+  <ion-content>
+      <h1> {{article.title}} </h1>
+      <p> {{article.content}} </p>
+  </ion-content>
+</ng-container>
