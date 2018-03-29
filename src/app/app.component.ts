@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Http, Response } from '@angular/http';
 import { ArticlesProvider } from '../providers/articles/articles';
 import 'rxjs/add/operator/map';
 
@@ -21,7 +20,6 @@ export class MyApp {
   constructor(public platform: Platform, 
               public statusBar: StatusBar, 
               public splashScreen: SplashScreen,
-              private http: Http,
               ) {
               
     this.initializeApp();

@@ -12,10 +12,9 @@ export class HomePage {
   constructor(public navCtrl: NavController, 
               private articlesProvider: ArticlesProvider) {
 
-      this.articlesProvider.all()
-          .subscribe(({ data }) => {
-          console.log(data);
-          this.articles = data;
-       });
+    this.articlesProvider.all()
+        .subscribe(({ data }) => {
+        this.articles = data;
+    });
   }
 }

@@ -13,10 +13,6 @@ export class ArticlesProvider {
                     .map((response: Response) => response.json())
   }
 
-  show(id: number) {
-
+  show(id: number) { 
   }
-
-  
-
 }
