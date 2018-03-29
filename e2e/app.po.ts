@@ -13,4 +13,8 @@ export class Page {
  getHomeTitleText() {
     return element(by.tagName('page-home')).element(by.tagName('ion-title')).getText();
   }
+
+  getArticleTitle() {
+    return element(by.tagName('page-home')).element(by.tagName('h1')).getText();
+  }
 }

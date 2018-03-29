@@ -17,5 +17,11 @@ describe('App', () => {
         expect(title).toEqual('Home');
       });
     });
+
+    it('should have article title My first article', ()  => {
+      page.getArticleTitle().then(article => {
+        expect(article).toEqual('My first article');
+      });
+    });
   });
 });
