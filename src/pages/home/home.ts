@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MyApp } from '../../app/app.component';
+import { ArticlesProvider } from '../../providers/articles/articles';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  articles: any[];
+  constructor(public navCtrl: NavController, private articlesProvider: ArticlesProvider) {
 
-  constructor(public navCtrl: NavController) {
-
+      this.articlesProvider.all()
+          .subscribe(({ data }) => {
+          console.log(data);
+          this.articles = data;
+       });
   }
-
 }
